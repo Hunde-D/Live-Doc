@@ -1,19 +1,22 @@
-import type { Metadata } from "next";
-import { Inter } from 'next/font/google'
-import { ThemeProvider } from '@/services/providers/theme-provider'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { ThemeProvider } from '@/services/providers/theme-provider';
+import './globals.css';
+//editor themes
+import './dark-theme.css';
+// import './light-theme.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Next.js Starter Template',
-  description: 'A powerful starter template with shadcn/ui and next-themes',
-}
+  title: 'Live Doc',
+  description: 'Your go-to for collaborative editing and sharing of documents',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -28,6 +31,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
-
